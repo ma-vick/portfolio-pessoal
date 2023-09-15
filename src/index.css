@@ -19,5 +19,11 @@
 body {
   min-height: 100vh;
   color: var(--font-color);
-  background: radial-gradient(50% 50% at 50% 50%, #FFE8CF 0%, #FFF 100%);
+  background: radial-gradient(50% 50% at 50% 50%, #ffe8cf 0%, #fff 100%);
+}
+
+.container {
+  max-width: 1224px;
+  margin: 0 auto;
+  padding: 20px;
 }

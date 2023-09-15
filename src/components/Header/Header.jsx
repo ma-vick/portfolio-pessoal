@@ -24,7 +24,7 @@ export default function Header() {
           </button>
           <ul className="navbar-links">
             <li>
-              <Link to="aboutme" className="link-header">
+              <Link to="/" className="link-header">
                 sobre mim
               </Link>
             </li>
