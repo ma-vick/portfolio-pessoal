@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoMenuOutline } from "react-icons/io5";
 import logo from "../../assets/imgs/logo.svg";
 import Sidebar from "../Sidebar/Sidebar.jsx";
@@ -14,9 +14,9 @@ export default function Header() {
       {sidebar && <Sidebar />}
       <div className="header-container">
         <div className="logo">
-          <Link to="/">
+          <NavLink to="/">
             <img src={logo} alt="Vick." className="logo-img" />
-          </Link>
+          </NavLink>
         </div>
         <nav className="navbar">
           <button className="btn-menu">
@@ -24,19 +24,34 @@ export default function Header() {
           </button>
           <ul className="navbar-links">
             <li>
-              <Link to="/" className="link-header">
+              <NavLink
+                to="/"
+                className={({ isActive, isPending }) =>
+                  isActive ? "link-header selected" : "link-header"
+                }
+              >
                 sobre mim
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="projects" className="link-header">
+              <NavLink
+                to="projects"
+                className={({ isActive, isPending }) =>
+                  isActive ? "link-header selected" : "link-header"
+                }
+              >
                 projetos
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="contact" className="link-header">
+              <NavLink
+                to="contact"
+                className={({ isActive, isPending }) =>
+                  isActive ? "link-header selected" : "link-header"
+                }
+              >
                 contato
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>
