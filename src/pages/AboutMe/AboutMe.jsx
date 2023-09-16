@@ -4,7 +4,7 @@ import "./AboutMe.css";
 
 export default function AboutMe() {
   return (
-    <main className="container">
+    <main className="container container-aboutme">
       <div className="img-container">
         <img src={img} alt="Victória Almeida" />
       </div>
@@ -21,9 +21,9 @@ export default function AboutMe() {
           como HTML, CSS, JS (ReactJS), PHP e MySQL. Busco saber sempre mais e
           melhorar meus conhecimentos atuais.
         </p>
-        <button className="btn-projects">
-          <Link to="projects">veja meus projetos</Link>
-        </button>
+        <Link to="projects">
+          <button className="btn-projects">veja meus projetos</button>
+        </Link>
       </section>
     </main>
   );

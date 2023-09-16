@@ -1,4 +1,4 @@
-.container {
+.container-aboutme {
   display: flex;
   gap: 50px;
   padding: 100px 20px;
@@ -42,13 +42,6 @@
   padding: 16px 20px;
   margin-top: 48px;
   transition: 0.3s ease;
-}
-
-.btn-projects:hover {
-  background-color: #7386ff;
-}
-
-.btn-projects a {
   text-decoration: none;
   color: #fff;
   font-size: .9rem;
@@ -56,6 +49,10 @@
   font-weight: 500;
   letter-spacing: 1.5px;
   word-spacing: 3px;
+}
+
+.btn-projects:hover {
+  background-color: #7386ff;
 }
 
 @media screen and (max-width: 770px) {
@@ -87,7 +84,7 @@
     margin-top: 35px;
   }
 
-  .btn-projects a {
+  .btn-projects {
     font-size: .7rem;
   }
 }
