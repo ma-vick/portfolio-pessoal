@@ -1,0 +1,48 @@
+.card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.img-project-card {
+    position: relative;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.img-project-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card:hover .img-project-card {
+    transform: translateY(-20px);
+}
+
+.info-project-card {
+    display: none;
+    position: absolute;
+    bottom: 3%;
+    background: linear-gradient(0deg, #0d335df5 50%, transparent);
+    border-radius: 8px;
+    padding: 16px 24px;
+    width: 100%;
+}
+
+.card:hover .info-project-card {
+    display: block;
+}
+
+.name-project-card {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: white;
+    padding: 60px 0 8px;
+}
+
+.tecnologies {
+    display: flex;
+    gap: 16px;
+}

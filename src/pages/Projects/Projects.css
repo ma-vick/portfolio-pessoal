@@ -5,3 +5,14 @@
   line-height: normal;
   text-transform: uppercase;
 }
+
+.main-projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px 35px;
+}

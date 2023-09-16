@@ -10,7 +10,7 @@
 }
 
 .name {
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   margin-bottom: 22px;
   color: #0d335d;
   font-family: "Unbounded", sans-serif;
@@ -20,14 +20,14 @@
 .position {
   color: #4942e4;
   font-family: "Unbounded", sans-serif;
-  font-size: 22px;
+  font-size: 1.25rem;
   font-weight: 500;
   text-transform: capitalize;
 }
 
 .description-me {
   color: #0d335d;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.8rem;
   margin-top: 50px;
@@ -51,19 +51,16 @@
 .btn-projects a {
   text-decoration: none;
   color: #fff;
-  font-size: 1rem;
+  font-size: .9rem;
   font-family: "Unbounded", sans-serif;
   font-weight: 500;
   letter-spacing: 1.5px;
   word-spacing: 3px;
 }
 
-.btn-projects a:visited {
-  color: white;
-}
-
 @media screen and (max-width: 770px) {
   .container {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
