@@ -1,9 +1,14 @@
 import "./ProjectCard.css";
 
-export default function ProjectCard() {
+export default function ProjectCard({ data }) {
   return (
-    <main className="container">
-      <h1 className="title-projects">ProjectCard</h1>
-    </main>
+    <div className="card">
+      <img
+        src={data.imgProject}
+        alt={data.nameProject}
+        className="img-project-card"
+      />
+      <h2>{data.nameProject}</h2>
+    </div>
   );
 }
