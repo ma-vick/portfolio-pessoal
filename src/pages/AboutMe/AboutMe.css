@@ -27,7 +27,7 @@
 
 .description-me {
   color: #0d335d;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   line-height: 1.8rem;
   margin-top: 50px;
@@ -60,4 +60,37 @@
 
 .btn-projects a:visited {
   color: white;
+}
+
+@media screen and (max-width: 770px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-container img {
+    width: 220px;
+  }
+
+  .info {
+    padding: 0 20px;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .position {
+    font-size: 1rem;
+  }
+
+  .description-me {
+    font-size: .8rem;
+    line-height: 25px;
+    margin-top: 35px;
+  }
+
+  .btn-projects a {
+    font-size: .7rem;
+  }
 }
