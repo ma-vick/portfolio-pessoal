@@ -18,6 +18,11 @@
   font-family: var(--primary-font);
 }
 
+body,
+html {
+  height: 100%;
+}
+
 body {
   min-height: 100vh;
   color: var(--font-color);

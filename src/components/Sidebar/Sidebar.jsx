@@ -1,18 +1,46 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
+import { useContext } from "react";
+import AppContext from "../../context/AppContext";
 
 export default function Sidebar() {
+  const {setSidebar} = useContext(AppContext);
+
   return (
     <nav className="nav-sidebar">
       <ul className="list-sidebar">
         <li>
-          <Link className="link-header">sobre mim</Link>
+          <NavLink
+            to="/"
+            onClick={() => setSidebar(false)}
+            className={({ isActive }) =>
+              isActive ? "link-header-list selected" : "link-header-list"
+            }
+          >
+            sobre mim
+          </NavLink>
         </li>
         <li>
-          <Link className="link-header">projetos</Link>
+          <NavLink
+            to="projects"
+            onClick={() => setSidebar(false)}
+            className={({ isActive }) =>
+              isActive ? "link-header-list selected" : "link-header-list"
+            }
+          >
+            projetos
+          </NavLink>
         </li>
         <li>
-          <Link className="link-header">contato</Link>
+          <NavLink
+            to="contact"
+            onClick={() => setSidebar(false)}
+            className={({ isActive }) =>
+              isActive ? "link-header-list selected" : "link-header-list"
+            }
+          >
+            contato
+          </NavLink>
         </li>
       </ul>
     </nav>

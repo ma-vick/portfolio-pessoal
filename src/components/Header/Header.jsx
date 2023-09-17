@@ -1,12 +1,13 @@
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { IoMenuOutline } from "react-icons/io5";
 import logo from "../../assets/imgs/logo.svg";
 import Sidebar from "../Sidebar/Sidebar.jsx";
 import "./Header.css";
+import AppContext from "../../context/AppContext";
 
 export default function Header() {
-  const [sidebar, setSidebar] = useState(false);
+  const { sidebar, setSidebar } = useContext(AppContext);
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
@@ -26,7 +27,7 @@ export default function Header() {
             <li>
               <NavLink
                 to="/"
-                className={({ isActive, isPending }) =>
+                className={({ isActive }) =>
                   isActive ? "link-header selected" : "link-header"
                 }
               >
@@ -36,7 +37,7 @@ export default function Header() {
             <li>
               <NavLink
                 to="projects"
-                className={({ isActive, isPending }) =>
+                className={({ isActive }) =>
                   isActive ? "link-header selected" : "link-header"
                 }
               >
@@ -46,7 +47,7 @@ export default function Header() {
             <li>
               <NavLink
                 to="contact"
-                className={({ isActive, isPending }) =>
+                className={({ isActive }) =>
                   isActive ? "link-header selected" : "link-header"
                 }
               >

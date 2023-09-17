@@ -35,3 +35,20 @@
 .nickname {
     font-family: 'Unbounded', sans-serif;
 }
+
+@media screen and (max-width: 770px){
+    .container-contact h1 {
+        font-size: 1.3rem;
+    }
+
+    .where-p {
+        font-size: .9rem;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .social-media {
+        font-size: .8rem;
+        padding: 8px 38px;
+    }
+}

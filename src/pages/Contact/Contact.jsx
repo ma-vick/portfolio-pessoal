@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <main className="container container-contact">
       <h1>Onde me encontrar?</h1>
-      <p>Estou presente nas seguintes redes:</p>
+      <p className="where-p">Estou presente nas seguintes redes:</p>
       <ul className="social-medias-list">
         <a href="https://github.com/ma-vick" target="_blank">
           <li className="social-media">
