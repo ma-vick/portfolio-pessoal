@@ -35,13 +35,15 @@ export default function Project() {
         />
         <div className="info-project">
           <span className="title-pp">
-            {projectId != 1 && window.innerWidth <= 770 && (
+            {projectId != 1 && window.innerWidth <= 770 ? (
               <Link
                 to={`/project/${Number.parseInt(projectId) - 1}`}
                 className="arrow prev"
               >
                 <GrPrevious />
               </Link>
+            ) : (
+              <span></span>
             )}
             <h1>
               {projects.projects[projectId - 1].nameProject
@@ -49,14 +51,16 @@ export default function Project() {
                 : "em breve"}
             </h1>
             {projectId != projects.projects.length - 1 &&
-              window.innerWidth <= 770 && (
-                <Link
-                  to={`/project/${Number.parseInt(projectId) + 1}`}
-                  className="arrow next"
-                >
-                  <GrNext />
-                </Link>
-              )}
+            window.innerWidth <= 770 ? (
+              <Link
+                to={`/project/${Number.parseInt(projectId) + 1}`}
+                className="arrow next"
+              >
+                <GrNext />
+              </Link>
+            ) : (
+              <span></span>
+            )}
           </span>
           <div className="tech-icon-pp">
             {projects.projects[projectId - 1].tecnologias.map((tec) => (

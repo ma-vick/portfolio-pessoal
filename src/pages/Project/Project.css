@@ -89,7 +89,7 @@
     }
 
     .info-project p {
-        font-size: .8rem;
+        font-size: .9rem;
         line-height: 25px;
     }
 
@@ -100,14 +100,16 @@
     .arrow {
       font-size: 1rem;
     }
-
+    
     .arrow:hover {
-      padding: 16px 8px;
+      padding: 0;
+      background: none;
     }
 
     .title-pp {
       display: flex;
-      align-items: center;
-      gap: 12px;
+      align-self: center;
+      justify-content: space-between;
     }
+
 }
