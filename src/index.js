@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import Projects from "./pages/Projects/Projects";
+import Project from "./pages/Project/Project";
 import Contact from "./pages/Contact/Contact";
 import AboutMe from "./pages/AboutMe/AboutMe";
 
@@ -23,9 +24,13 @@ const router = createBrowserRouter([
         element: <Projects />,
       },
       {
+        path: "project/:projectId",
+        element: <Project />
+      },
+      {
         path: "contact",
         element: <Contact />
-      }
+      },
     ]
   }
 ]);
