@@ -85,7 +85,7 @@
     }
     
     .info-project h1 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .info-project p {
@@ -95,5 +95,19 @@
 
     .info-project button {
         font-size: 0.7rem;
+    }
+
+    .arrow {
+      font-size: 1rem;
+    }
+
+    .arrow:hover {
+      padding: 16px 8px;
+    }
+
+    .title-pp {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 }

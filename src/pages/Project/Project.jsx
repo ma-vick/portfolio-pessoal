@@ -15,10 +15,10 @@ export default function Project() {
 
   return (
     <main className="container container-project">
-      {projectId != 1 && (
+      {projectId != 1 && window.innerWidth > 770 && (
         <Link
           to={`/project/${Number.parseInt(projectId) - 1}`}
-          className="arrow"
+          className="arrow prev"
         >
           <GrPrevious />
         </Link>
@@ -34,11 +34,30 @@ export default function Project() {
           className="img-project-page"
         />
         <div className="info-project">
-          <h1>
-            {projects.projects[projectId - 1].nameProject
-              ? projects.projects[projectId - 1].nameProject
-              : "em breve"}
-          </h1>
+          <span className="title-pp">
+            {projectId != 1 && window.innerWidth <= 770 && (
+              <Link
+                to={`/project/${Number.parseInt(projectId) - 1}`}
+                className="arrow prev"
+              >
+                <GrPrevious />
+              </Link>
+            )}
+            <h1>
+              {projects.projects[projectId - 1].nameProject
+                ? projects.projects[projectId - 1].nameProject
+                : "em breve"}
+            </h1>
+            {projectId != projects.projects.length - 1 &&
+              window.innerWidth <= 770 && (
+                <Link
+                  to={`/project/${Number.parseInt(projectId) + 1}`}
+                  className="arrow next"
+                >
+                  <GrNext />
+                </Link>
+              )}
+          </span>
           <div className="tech-icon-pp">
             {projects.projects[projectId - 1].tecnologias.map((tec) => (
               <Technology name={tec} />
@@ -52,10 +71,10 @@ export default function Project() {
           </a>
         </div>
       </div>
-      {Number.parseInt(projectId) != projects.projects.length - 1 && (
+      {projectId != projects.projects.length - 1 && window.innerWidth > 770 && (
         <Link
           to={`/project/${Number.parseInt(projectId) + 1}`}
-          className="arrow"
+          className="arrow next"
         >
           <GrNext />
         </Link>
