@@ -79,6 +79,12 @@
   border-radius: 8px;
 }
 
+.title-pp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 770px) {
     .info-project {
         padding: 0;

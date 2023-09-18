@@ -11,8 +11,6 @@ export default function Project() {
   const { projectId } = useParams();
   const projects = useContext(AppContext);
 
-  console.log(projectId, projects.projects);
-
   return (
     <main className="container container-project">
       {projectId != 1 && window.innerWidth > 770 && (
